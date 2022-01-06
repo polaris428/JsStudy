@@ -19,6 +19,7 @@
     <div class="blick-background">
         <div class="white-background">
             <p>로그인하세요</p>
+            <button id="close"style="color: red ;background: #ffffff;border-color: red;border-radius: 10px">닫기</button>
         </div>
     </div>
 
@@ -45,17 +46,23 @@
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Log In</a>
+        
     </div>
+    <input id='input' type="text">
 
     <script>
         $('.btn').on("click", function() {
-            console.log("afdafsa")
+            if( $('#input').val()=='안녕')
             $('.blick-background').slideDown()
+        })
+        $('#close').on('click',function(){
+            $('.blick-background').slideUp()
         })
         
         $('#nav-sub-button').click(function(){
             $('.nav-sub').slideToggle();
         })
+        
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
