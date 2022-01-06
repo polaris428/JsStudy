@@ -8,21 +8,27 @@
 
 <body>
     <div id="alert" class="alert-box">
-        Alert 박스
+        <p id="text"></p>
+        
+        <button id="coles">X</button>
+      
     </div>
     <button onclick="아이디('block','아이디를 입력해주세요')">아이디 버튼</button>
     <button onclick="아이디('none','아이디를 입력해주세요')">아이디 닫기 버튼</button>
     
     <button onclick="아이디('block','비밀번호를 입력해주세요')">비밀번호 버튼</button>
-    <button onclick="아이디('none','비밀번호를 입력해주세요')">비밀번호 버튼</button>
+    
     
      
 
     <script>
         function 아이디(구멍,이름){
             document.getElementById('alert').style.display= 구멍;
-               document.getElementById('alert').innerHTML=이름;
+               document.getElementById('text').innerHTML=이름;
         }
-       
+        document.getElementById('coles').addEventListener('click',function(){
+            document.getElementById('alert').style.display= 'none';
+            
+        })
     </script>
 </body></html>
