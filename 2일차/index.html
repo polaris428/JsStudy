@@ -10,15 +10,19 @@
     <div id="alert" class="alert-box">
         Alert 박스
     </div>
-    <button onclick="알림창열기()">버튼</button>
-     <button onclick="알림창닫기()">닫기 버튼</button>
+    <button onclick="아이디('block','아이디를 입력해주세요')">아이디 버튼</button>
+    <button onclick="아이디('none','아이디를 입력해주세요')">아이디 닫기 버튼</button>
+    
+    <button onclick="아이디('block','비밀번호를 입력해주세요')">비밀번호 버튼</button>
+    <button onclick="아이디('none','비밀번호를 입력해주세요')">비밀번호 버튼</button>
+    
+     
 
     <script>
-        function 알림창닫기(){
-            document.getElementById('alert').style.display='none';
+        function 아이디(구멍,이름){
+            document.getElementById('alert').style.display= 구멍;
+               document.getElementById('alert').innerHTML=이름;
         }
-        function 알림창열기(){
-            document.getElementById('alert').style.display='block';
-        }
+       
     </script>
 </body></html>
