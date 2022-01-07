@@ -29,6 +29,7 @@
     width: 100%;
     height: 100%;
     display: none;
+    margin-top: -1200px;
     
 }
 
@@ -42,4 +43,13 @@
 
 .nav-sub {
     display: none;
+}
+
+.left-menu {
+    width: 150px;
+    height: 100%;
+    background: black;
+    color: white;
+    position: fixed;
+    margin-left: -150px;
 }

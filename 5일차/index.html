@@ -16,10 +16,19 @@
 </head>
 
 <body>
+   
+   <div class="left-menu">
+      <p>메뉴</p>
+       
+   </div>
+   
+   
+   
+   
     <div class="blick-background">
         <div class="white-background">
             <p>로그인하세요</p>
-            <button id="close"style="color: red ;background: #ffffff;border-color: red;border-radius: 10px">닫기</button>
+            <button id="close" style="color: red ;background: #ffffff;border-color: red;border-radius: 10px">닫기</button>
         </div>
     </div>
 
@@ -47,13 +56,22 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Log In</a>
         
+        <a class="btn btn-danger btn-lg" href="#" role="button">Sow Menu</a>
+        
     </div>
-    <input id='input' type="text">
-
     <script>
-        $('.btn').on("click", function() {
-            if( $('#input').val()=='안녕')
-            $('.blick-background').slideDown()
+     $('.btn-danger').click(function(){
+        $('.left-menu').animate({marginLeft :'0px'}) 
+     })
+        
+    
+    </script>
+  
+    <script>
+        $('.btn-primary').on("click", function() {
+          //  if( $('#input').val()=='안녕')
+            $('.blick-background').show();
+            $('.blick-background').animate({marginTop:'0px'})
         })
         $('#close').on('click',function(){
             $('.blick-background').slideUp()
