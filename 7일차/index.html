@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 id='hello'>안녕</h1>
+    <button onclick="chang()">변경 </button>
+    <script>
+     function chang() {
+            $.ajax({
+                url: 'https://codingapple1.github.io/hello.txt',
+                type: 'GET'
+            }).done(function(data) {
+
+                $('#hello').text(data)
+                console.log(data)
+            }).fail(function(){
+                //실패했을때
+            }).always(function(){
+                //항상 실행
+            });
+                    
+        }
+
+    </script>
+</body>
+
+</html>
